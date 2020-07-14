@@ -1,0 +1,186 @@
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.auth-layout {
+    background-repeat: no-repeat;
+    background-image: url(assets/img/SLIDE.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+}
+
+.main-content {
+    font-size: 13px;
+}
+
+.caption {
+    margin-bottom: 13px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form-row {
+    display: -webkit-box;
+}
+
+.g-recaptcha {
+    margin: 0 auto;
+}
+
+.login {
+    background-color: #06170D !important;
+}
+
+    .login input {
+        background-color: #06170D !important;
+    }
+
+    .login button {
+        background-color: #0d3c20 !important;
+        border-color: #0d3c20 !important;
+    }
+ 
+    .login a {
+        color:#337ab7 !important;
+    }
+    .login a.btn {
+        background-color: #0d3c20 !important;
+        border-color: #0d3c20 !important;
+    }
+
+
+.btn.btn-icotoken-green {
+    background-color: #0d3c20 !important;
+    border-color: #0d3c20 !important;
+    color: #ffffff !important;
+}
+.btn.btn-icotoken-blue {
+    background-color: #072e50 !important;
+    border-color: #072e50 !important;
+    color: #ffffff !important;
+}
+
+/*documents > files*/
+.file-desc {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+
+.docs .dashboard-stat {
+    margin: 6px 0px;
+}
+
+
+
+
+
+/*#region Custom */
+
+
+
+/*damn metronic dont use latest bootstrap for burger collapse*/
+.page-sidebar.navbar-collapse.show {
+    border-top: 0 !important;
+    margin: 20px;
+    position: relative;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    display: block !important;
+}
+
+.page-sidebar .page-sidebar-menu > li > a > i.fa,
+.page-sidebar .page-sidebar-menu > li > a > i.fas,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a > i {
+    font-weight: 900;
+}
+
+/*toastr for body content*/
+.crt-toast-top-right {
+    top: 60px;
+    right: 12px;
+}
+
+.login-options {
+    margin-top: 0px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border-top: 1px solid #69a0c4 !important;
+    border-bottom: 1px solid #69a0c4 !important;
+}
+
+
+@media (max-width: 1400px) {
+    .login .logo {
+        margin-top: 40px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn {
+        display: block;
+        width: 100%;
+    }
+
+    .page-header.navbar {
+        /*padding: 0;*/
+        height: inherit;
+    }
+
+    .login .content {
+        width: auto !important;
+        margin: 40px 20px !important;
+    }
+
+     
+}
+
+@media (max-width: 480px) {
+    .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
+        background-color: transparent !important;
+    }
+}
+
+.page-content-wrapper {
+    background-color: #06170D;
+}
+
+.page-header.navbar {
+    background-color: #06170D;
+}
+
+.page-header.navbar .page-top {
+    height: 68px;
+    background-color: #06170D;
+}
+.page-footer {
+    background-color: #06170D;
+}
+
+
+
+.page-sidebar.navbar-collapse {
+    background-color: #06170D;
+}
+.page-sidebar-menu a.nav-link {
+    background-color: #06170D !important;
+}
+.page-sidebar .page-sidebar-menu > li, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li {
+
+    /*border-bottom: 1px dotted #808080;*/
+}
+
+/*#endregion */

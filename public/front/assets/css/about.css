@@ -1,0 +1,266 @@
+
+.site-header .navbar.is-transparent {
+    background: #000;
+}	
+
+.align-items-center{padding:80px 0 0px 0;}
+	
+.m_tl {margin: 2px 0px 0px 20px; display: inline-block;   vertical-align: top;}
+.fa-3x {font-size: 2.5em;}
+
+
+		
+.underxxt{}
+.underxxt h2{font-weight: normal;    margin: 0 0 10px 0;    font-size: 40px;    letter-spacing: -1px;}
+.underxxt p{color: #333 !important;    text-align: left !important;    font-size: 18px;    line-height: 25px;}		
+
+.underxxt1{margin-bottom:70px; width: 680px; margin:0 auto; padding-bottom:100px;}
+.underxxt1 h3 {font-size: 20px; text-align: center; color: #fff; font-weight: normal;}		
+.clor{color: #333; font-weight:500 !important;}
+		.form-control1{margin-bottom:20px;}
+
+.submit-btn {
+    border-radius: 20px;
+    border: none;
+    color: #353535;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 40px;
+    display: block;
+    margin: 10px 0;
+    max-width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: linear-gradient(319deg, #a36d2a, #f1d20b, #986025);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationButton 3s ease infinite;
+    -moz-animation: AnimationButton 3s ease infinite;
+    animation: AnimationButton 3s ease infinite;
+}
+
+    .submit-btn:hover{
+        cursor:pointer;
+        }
+
+      @-webkit-keyframes AnimationButton {
+          0%{background-position:49% 0%}
+          50%{background-position:52% 100%}
+          100%{background-position:49% 0%}
+      }
+      @-moz-keyframes AnimationButton {
+          0%{background-position:49% 0%}
+          50%{background-position:52% 100%}
+          100%{background-position:49% 0%}
+      }
+      @keyframes AnimationButton { 
+          0%{background-position:49% 0%}
+          50%{background-position:52% 100%}
+          100%{background-position:49% 0%}
+      }
+    .lg-wpr{
+        padding :50px 0 50px 0;
+        }
+		
+		.lg-wpr1{
+        padding :50px 0 50px 0;
+        }
+
+        .reg-heading{
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 5px;
+        }
+
+    .reg-sub-heading{
+        color:#fff;
+        font-size: 14px;
+        }
+
+    .text-white{
+        color: #fff;
+        }
+
+    .mr-bt-20{
+        margin-bottom: 20px;
+        }
+
+    #forgot-modal{
+        top: 10% ;
+        }
+
+    body::-webkit-scrollbar {
+        width: 0.4em;
+    }
+     
+    body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    body::-webkit-scrollbar-thumb {
+      background-color: #353535;
+      outline: 1px solid slategrey;
+    }
+
+    .fr-heading{
+        font-size: 20px;
+        }
+
+    #forgot-modal .modal-header{
+        background: #f0d20b;
+        padding:10px 25px;
+        }
+
+    .earth-img{
+        position: relative;
+        }
+
+    .earth-img img  {
+        display: block;
+        width: 450px ;
+        margin:0 auto;
+        }
+
+    #loading{
+        -webkit-animation: rotation 10s infinite linear;
+        }
+
+    @-webkit-keyframes rotation {
+        from {
+                -webkit-transform: rotate(0deg);
+        }
+        to {
+                -webkit-transform: rotate(359deg);
+        }
+    }
+
+    .jio-img{
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        margin-left: -115px;
+        }
+
+     .jio-img img{
+        display: block;
+        width: 230px;
+        margin: 0 auto;
+        }
+
+    .mr-tp-30{
+        margin-top: 50px;
+        }
+
+    @media screen and (max-width:992px){
+	.mbool{display:none;}
+        .login-wpr, .login-form{
+            width: 100%;
+            }
+
+        .mr-tp-30{
+            margin-top: 10px;
+            }
+
+        .jio-img{
+            top: 4%;
+            }
+
+
+      }
+
+	  
+	.margn {width:50%; float:left; text-align: center;} 
+	.margn1 {width:50%; float:right; text-align: center;}
+	
+	@media screen and (width:414px){
+	.align-items-center {padding:70px 0 0px 0 !important;}
+	}
+
+	@media screen and (width:411px){
+	.align-items-center {padding:70px 0 0px 0 !important;}
+	}
+	
+	@media screen and (width:375px){
+	.align-items-center {padding:70px 0 0px 0 !important;}
+	}
+	
+	@media screen and (width:360px){
+	.align-items-center {padding:70px 0 0px 0 !important;}
+	}
+	
+	@media screen and (width:320px){
+	.align-items-center {padding:70px 0 0px 0 !important;}
+	}
+
+	
+    @media screen and (max-width:767px){
+		.copyright-text {font-size: 11px;}
+		.footer-links li {margin: 0 2px;}
+		.footer-links li a {font-size: .7em !important;   letter-spacing: 0.5px !important;}
+	.clor {font-weight: 600 !important; font-size: 30px !important;}
+	.lg-wpr1 {padding:30px 0 30px 0;}
+	
+	.bg-opacity-9{min-height: inherit;}
+	.login-container2{min-height: inherit;}
+	.margn {width: 50%;}
+	.underxxt1 {padding-bottom: 50px;   padding-left: 15px;  padding-right: 15px; width:auto;}
+	.underxxt1 h3 {font-size: 18px;}
+	
+	.lg-wpr {padding: 30px 0 50px 0;}
+       .top-bg {background-size: contain;     min-height: inherit;}        
+       .login-container{
+            padding-right: 15px;
+            }
+
+        .login-wpr{
+            margin-top:40px;
+            width:100%;
+            }
+
+        .login-form{
+            margin:0 auto;
+            width:calc(100% - 2%);
+            }
+
+        .login-top img{
+            margin-bottom: 15px;
+            }
+
+        .copy-right {
+            padding: 10px 0 0 0;
+            }
+
+        .reg-sub-heading{
+            padding-bottom: 20px;
+        }   
+
+        .jio-img img{
+            display: block;
+            width: 180px;
+            margin: 0 auto;
+            }
+
+        .jio-img{
+                left: 58%;
+                top: 12%;
+            }
+      }
+
+
+	 @media screen and (max-width:768px){ 
+
+.login-container2{min-height:auto;}
+.align-items-center {
+    padding:100px 0 20px 0;
+}
+}
+
+
+.condette{}
+.condette h2{font-size:28px; font-size: 38px;    font-weight: 700; text-decoration:uppercase; margin:0 0 20px 0; color:#333; padding:0;}
+.condette h3{font-size:20px; color:#333; text-decoration:uppercase; margin:0 0 10px 0; padding:0;}
+.condette span{font-size:16px; color:#333; font-weight:600; font-style:italic;}
+.condette p{font-size:14px; color:#000; margin:7px 0 10px 0; }
+
+.m-t-30{margin-top:30px !important;}
+

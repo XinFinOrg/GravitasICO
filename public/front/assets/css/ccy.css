@@ -1,0 +1,20 @@
+﻿.ccy {
+    height: 1px;
+    font-style: normal !important;
+}
+
+.fa-bitcoin {
+    color: #F79413;
+}
+
+.fa-ethereum {
+    color:#5481A3;
+}
+
+.ccy-litecoin {
+    color: #BEBEBE;
+}
+
+.ccy-ripple {
+    color: #087FB6;
+}

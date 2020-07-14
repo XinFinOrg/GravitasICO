@@ -1,0 +1,16 @@
+{
+  "name": "noderecord",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parallelshell \"node ./api/schedule.js\" \"nodemon ./bin/www\""
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "keythereum": "^1.0.3"
+  },
+  "devDependencies": {
+    "truffle-contract": "^1.1.6",
+    "web3": "^0.18.2"
+  }
+}

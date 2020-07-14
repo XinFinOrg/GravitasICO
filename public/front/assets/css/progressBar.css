@@ -1,0 +1,108 @@
+.progress{display:-webkit-box;display:-ms-flexbox;display:flex;height:1rem;overflow:hidden;font-size:.75rem;background-color:#e9ecef;border-radius:.25rem}
+.progress-bar{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:#fff;text-align:center;background-color:#007bff;transition:width .6s ease}
+
+.progress, 
+.progress-bar {
+	border-radius: 20px;
+	color: #5957cd;
+	font-size: 14px;
+	text-align: right;
+}
+.progress-bar {
+	padding-right: 12px;
+}
+.progress {
+	background-color: transparent;
+	border: 2px solid #3c70ce;
+	height: 23px;
+	margin-bottom: 40px;
+	margin-top: 50px;
+	overflow: visible;
+	position: relative;
+}
+.progress-bar {
+	background: #fff;
+	background: #fff;
+    font-weight: 600;
+}
+.progress-bar-success {
+	background-color: #05B5FF;
+}
+.progress .progress_label {
+	bottom: -6px;
+	color: #ffffff;
+	line-height: 1;
+	position: absolute;
+	top: -6px;
+	width: 1px;
+}
+.progress .progress_label strong {
+	font-size: 14px;
+	font-weight: 600;
+	left: 50%;
+	margin-top: 5px;
+	position: absolute;
+	top: 100%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+.progress_max_val {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 0 5px;
+	position: absolute;
+	right: 0;
+	top: -50px;
+}
+.progress_min_val {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 0 5px;
+	position: absolute;
+	left: 0;
+	top: -30px;
+}
+
+.progress_center_val {
+	color: orange;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 0 5px;
+	position: absolute;
+	left: 20px;
+	top: -50px;
+}
+
+.bg-white .progress-bar {
+	background: #5957cd;
+}
+.bg-white .progress {
+	border-color: #5957cd;
+}
+.bg-white .progress_min_val,
+.bg-white .progress_max_val,
+.bg-white .progress .progress_label {
+	color:#5957cd;
+}
+.bg-white .progress, 
+.bg-white .progress-bar {
+	color:#fff;
+}
+.bg-white {
+	background-color: #ffffff;
+}
+
+
+.bg-orange {
+	background-color: orange;
+}
+
+.progress-bar.gradient {
+    background-image: -webkit-linear-gradient(top, #00580e 0%,#5fe76f 90%);
+    background-image: linear-gradient(to top, #00580e 0%,#5fe76f 90%);
+}
