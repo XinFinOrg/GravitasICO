@@ -39,29 +39,13 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',//env('DB_HOST', '127.0.0.1'),
-            'port' => '3306',//env('DB_PORT', '3306'),
-            'database' => 'demo_icodb',//env('DB_DATABASE', 'forge'),
-            'username' => 'root',//env('DB_USERNAME', 'forge'),
-            'password' => '',//env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => 'XDC_',//env('DB_PREFIX', 'forge'),
-            'strict' => false,
-            'engine' => null,
-        ],
-
- 
         // 'mysql' => [
         //     'driver' => 'mysql',
-        //     'host' => 'localhost',//env('DB_HOST', '127.0.0.1'),
+        //     'host' => '127.0.0.1',//env('DB_HOST', '127.0.0.1'),
         //     'port' => '3306',//env('DB_PORT', '3306'),
-        //     'database' => 'icofoodc_icodb',//env('DB_DATABASE', 'forge'),
-        //     'username' => 'icofoodc_icodb',//env('DB_USERNAME', 'forge'),
-        //     'password' => 'k1Gf.a%}^&Y#',//env('DB_PASSWORD', ''),
+        //     'database' => 'demo_icodb',//env('DB_DATABASE', 'forge'),
+        //     'username' => 'root',//env('DB_USERNAME', 'forge'),
+        //     'password' => '',//env('DB_PASSWORD', ''),
         //     'unix_socket' => env('DB_SOCKET', ''),
         //     'charset' => 'utf8mb4',
         //     'collation' => 'utf8mb4_unicode_ci',
@@ -69,6 +53,22 @@ return [
         //     'strict' => false,
         //     'engine' => null,
         // ],
+
+ 
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',//env('DB_HOST', '127.0.0.1'),
+            'port' => '3306',//env('DB_PORT', '3306'),
+            'database' => 'gravitasico',//env('DB_DATABASE', 'forge'),
+            'username' => 'gravitasico',//env('DB_USERNAME', 'forge'),
+            'password' => 'k1Gf.a%}^&Y#',//env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => 'XDC_',//env('DB_PREFIX', 'forge'),
+            'strict' => false,
+            'engine' => null,
+        ],
 
 
 
