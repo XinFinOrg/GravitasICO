@@ -169,31 +169,6 @@
                                                 <h3>User Balance: </h3>
 
 
-                                                <!-- BTC -->
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="inputLastName"
-                                                                   class="col-md-2 control-label"><strong>BTC:</strong>
-                                                            </label>
-
-                                                            <div class="col-md-10"><p class="form-control-static">
-                                                                    {{get_userbalance($id,'BTC')}}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="inputLastName"
-                                                                   class="col-md-2 control-label"><strong> Verified BTC:</strong>
-                                                            </label>
-
-                                                            <div class="col-md-10"><p class="form-control-static">
-                                                                    {{$BTC_Bal}}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
                                                <!-- ETH -->
                                                     <div class="col-md-6">
@@ -215,33 +190,7 @@
                                                     </div>
                                                     </div>
 
-                                                <!-- USDT -->
-                                                <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="inputLastName"
-                                                                   class="col-md-2 control-label"><strong>USDT:</strong>
-                                                            </label>
-
-                                                            <div class="col-md-10"><p class="form-control-static">
-                                                                    {{get_userbalance($id,'USDT')}}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="inputLastName"
-                                                                   class="col-md-2 control-label"><strong> Verified USDT:</strong>
-                                                            </label>
-
-                                                            <div class="col-md-10"><p class="form-control-static">
-                                                                    {{$USDT_Bal}}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>    
-
+                                                
                                                 <!-- GIFT -->
                                                 <div class="col-md-6">
                                                     <div class="form-group"><label for="inputLastName"
@@ -265,18 +214,7 @@
                                                 </div>
 
 
-                                                <h3>User Addresses: </h3>
-                                                <div class="col-md-12">
-                                                    <div class="form-group"><label for="inputLastName"
-                                                                                   class="col-md-2 control-label"><strong>BTC:</strong></label>
-
-                                                        <div class="col-md-10"><p class="form-control-static">
-                                                                {{$result->BTC_addr}}<br>
-                                                            </p></div>
-                                                    </div>
-                                                </div>
-
-
+                                                <h3>User Addresses: </h3>                                            
 
                                                 <div class="col-md-12">
                                                     <div class="form-group"><label for="inputLastName"
@@ -288,17 +226,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
-                                                    <div class="form-group"><label for="inputLastName"
-                                                                                   class="col-md-2 control-label"><strong>USDT:</strong></label>
-
-                                                        <div class="col-md-10"><p class="form-control-static">
-                                                                {{$result->USDT_addr}}<br>
-                                                            </p></div>
-                                                    </div>
-                                                </div>
-
-
+                                                
                                                 <div class="col-md-12">
                                                     <div class="form-group"><label for="inputLastName"
                                                                                    class="col-md-2 control-label"><strong>GIFT:</strong></label>

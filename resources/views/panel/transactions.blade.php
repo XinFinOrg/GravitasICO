@@ -48,18 +48,12 @@
                                             <lable>Currency</lable>
                                             <select class="form-control" name="currency">
                                                 <option value="all">All</option>
-                                                <option value="BTC"
-                                                        @if(app('request')->input('currency')=='BTC') selected @endif>
-                                                    BTC
-                                                </option>
+                                                
                                                 <option value="ETH"
                                                         @if(app('request')->input('currency')=='ETH') selected @endif>
                                                     ETH
                                                 </option>
-                                                <option value="ETH"
-                                                        @if(app('request')->input('currency')=='USDT') selected @endif>
-                                                    USDT
-                                                </option>
+                                                
 
                                             </select>
                                         </div>

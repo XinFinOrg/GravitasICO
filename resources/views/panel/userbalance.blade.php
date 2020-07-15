@@ -66,9 +66,9 @@
                                             <th><a href="#" id="bal_tooltip" data-html="true" data-toggle="tooltip">#</a></th>
                                             <th>Username</th>
                                             <th>UserID</th>
-                                            <th>BTC<a href="{{url('/admin/userbalance?currency=BTC')}}"><i class="fa fa-fw fa-sort pull-right"></i></a></th>
+                                            
                                             <th>ETH<a href="{{url('/admin/userbalance?currency=ETH')}}"><i class="fa fa-fw fa-sort pull-right"></i></a></th>
-                                            <th>USDT<a href="{{url('/admin/userbalance?currency=USDT')}}"><i class="fa fa-fw fa-sort pull-right"></i></a></th>
+                                            
                                             <th>GIFT<a href="{{url('/admin/userbalance?currency=GIFT')}}"><i class="fa fa-fw fa-sort pull-right"></i></a></th>
                                             @if($Header == 'User Wallet Balance')
                                             <th>Edit</th>
@@ -86,12 +86,12 @@
                                                     <td>
                                                             {{$val->enjoyer_name}}</td>
                                                     <td>{{$val->user_id}}</td>
-                                                    <td>{{$val->BTC}}</td>
+                                                   
                                                     <td>{{$val->ETH}}</td>
-                                                    <td>{{$val->USDT}}</td>
+                                                    
                                                     <td>{{$val->GIFT}}</td>
                                                     @if($Header == 'User Wallet Balance')
-                                                    <td><a onclick="update_userbal('{{$val->user_id}}','{{$val->enjoyer_name}}','{{$val->BTC}}','{{$val->ETH}}','{{$val->USDT}}','{{$val->GIFT}}')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                    <td><a onclick="update_userbal('{{$val->user_id}}','{{$val->enjoyer_name}}','{{$val->ETH}}','{{$val->GIFT}}')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
 
                                                     @else
                                                         <td>{{$val->created_at}}</td>
@@ -144,18 +144,11 @@
                         <div class="row">
                             <input type="hidden" class="form-control" name="user_id" id="user_id">
                             <input type="hidden" class="form-control" name="user_name" id="user_name">
-                            <div class="form-group col-md-6">
-                                <label >BTC Amount</label>
-                                <input type="text" class="form-control" name="btc" id="btc" >
-                            </div>
+                           
                             <div class="form-group col-md-6">
                                 <label>ETH Amount</label>
                                 <input type="text" class="form-control" name="eth" id="eth" >
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>USDT Amount</label>
-                                <input type="text" class="form-control" name="usdt" id="usdt" >
-                            </div>
+                            </div>                          
 
                             <div class="form-group col-md-6">
                                 <label>GIFT Amount</label>
@@ -185,11 +178,11 @@
             var url = document.getElementById('url').value;
             var anchor = document.getElementById('bal_tooltip');
             $.getJSON(url+"/total_userbalance",function(result){
-                anchor.title = 'Total BTC: '+result.BTC+
+                anchor.title = 'Total ETH: '+result.ETH+
 
-                    ' Admin BTC: '+result.Admin_BTC+'\nTotal ETH: '+result.ETH+
+                    // ' Admin BTC: '+result.Admin_BTC+'\nTotal ETH: '+result.ETH+
                     ' Admin ETH: '+result.Admin_ETH+'\nTotal GIFT: '+result.GIFT+
-                    ' Admin USDT: '+result.Admin_USDT+'\nTotal GIFT: '+result.GIFT+
+                    // ' Admin USDT: '+result.Admin_USDT+'\nTotal GIFT: '+result.GIFT+
                     ' Admin GIFT: '+result.Admin_GIFT;
             });
             var myTable = $('#myTable').DataTable({
@@ -201,26 +194,25 @@
 
         });
 
-        function update_userbal(user_id,name,btc,eth,usdt,icotoken)
+        function update_userbal(user_id,name,eth,icotoken)
         {
             var User_id = document.getElementById('user_id');
             var User_name = document.getElementById('user_name');
             User_name.value = name;
             User_id.value = user_id;
-            var Btc = document.getElementById('btc');
+           
             var Eth = document.getElementById('eth');
-            var Usdt = document.getElementById('usdt');
+             
             var Xdce = document.getElementById('icotoken');
             var header = document.getElementById('header');
             header.innerHTML = "Edit "+name+" Balance";
-            Btc.placeholder = btc;
-            Btc.value = btc;
+            
             Xdce.placeholder = icotoken;
             Xdce.value = icotoken;
             Eth.placeholder = eth;
             Eth.value = eth;
-            Usdt.placeholder = usdt;
-            Usdt.value = usdt;
+
+          
             $('#update_user').modal('show');
 
 

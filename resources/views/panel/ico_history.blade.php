@@ -31,7 +31,7 @@
                         <div class="panel-body"  data-toggle="modal" data-target="#update_price" >
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div style="text-align: center"><i class="fa font50"><img src="{{URL::asset('front')}}/assets/img/GIFT.jpg" class="stat-icon" style="width: 50px;height: 50px;"></i></div>
+                                    <div style="text-align: center"><i class="fa font50"><img src="{{URL::asset('front')}}/assets/img/favicon.png" class="stat-icon" style="width: 50px;height: 50px;"></i></div>
                                     <div style="text-align: center"><p><h2>{{$stats['Total']}} GIFT</h2></p>
                                         <p class="description "><strong>ICO Purchased</strong></p></div>
                                 </div>
@@ -41,12 +41,7 @@
                                 <div class="col-md-12">
                                     <label><strong>ETH Price:&nbsp;</strong>{{$price['ETH']}} USD</label>
                                 </div>
-                                <div class="col-md-12">
-                                    <label><strong>BTC Price:&nbsp;</strong>{{$price['BTC']}} USD</label>
-                                </div>
-                                <div class="col-md-12">
-                                    <label><strong>USDT Price:&nbsp;</strong>{{$price['USDT']}} USD</label>
-                                </div>
+                                
                             </div>
 
 
@@ -72,12 +67,7 @@
                                 <div class="col-md-12">
                                     <label><strong>ETH :&nbsp;</strong>{{$stats['ETH']}}</label>
                                 </div>
-                                <div class="col-md-12">
-                                    <label><strong>BTC :&nbsp;</strong>{{$stats['BTC']}}</label>
-                                </div>
-                                <div class="col-md-12">
-                                    <label><strong>USDT :&nbsp;</strong>{{$stats['USDT']}}</label>
-                                </div>
+                               
                             </div>
 
 
