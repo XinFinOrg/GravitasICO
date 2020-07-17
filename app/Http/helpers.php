@@ -575,31 +575,34 @@ function get_market_price($currency, $currency1)
 function create_eth_address($userid)
 {
     try{
+        $pass = 'alphaex';
         $curl = curl_init();
-
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "",
+            CURLOPT_PORT => '8545',
+            CURLOPT_URL => "http://78.129.229.18:8545",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "{\"method\":\"personal_newAccount\",\n\"params\":[\"" . $pass . "\"],\"id\":1}",
             CURLOPT_HTTPHEADER => array(
                 "Cache-Control: no-cache",
                 "Content-Type: application/json",
-                "Postman-Token: 488c788f-4576-c48c-3605-1999db4f013a"
+                "Postman-Token: 96e74ce3-b2ec-4235-bc0a-1435e9c13aee"
             ),
         ));
-
         $response = curl_exec($curl);
+        $err = curl_error($curl);
         curl_close($curl);
         if ($response) {
-            $result = json_decode($response);
-            return $result->result;
-        } else {
-            return '';
-        }
+            $response = json_decode($response);
+            return $response->result;
+        } else if ($err)
+            return "";
+        else
+            return "";
     }catch (\Exception $e) {
         \Log::error([$e->getFile(), $e->getLine(), $e->getMessage()]);
         return '';
@@ -1615,8 +1618,8 @@ function create_address($currency, $url)
 
     try {
 
-        $public_key = '0fa7d0b9c39d57db0cd9b58e89418f6443ae177bba58c7b73b46708eb7ea3803';
-        $private_key = 'd6f9da38F5Dd880735DbEa7D5832c8EA90ef2f4c546c19A645dB32357542DF39';
+        $public_key = '115a6c7346a0c0dd55aa28641e90e6d54577ded225d4577ab98ba8891f285372';
+        $private_key = '7bE16046d054451BC80D28eC2C5797e2b37c71ecb3819Ab3017913e77272Af11';
         $secret = ']MJ.Xv=G%}{4';
 
         // Note there are two required post fields  "cmd" and "currency" per the above referenced documentation
@@ -1663,7 +1666,8 @@ function generate_currency_address($userid, $currency)
         if ($currency == 'ETH') {
             $eth = get_user_details($userid, 'ETH_addr');
             if ($eth == "") {
-                $val = create_address('ETH', 'http://ico.foodcode.io/cron/eth_deposit_process');
+                //coin payment code
+                $val = create_address('ETH', 'http://127.0.0.1/cron/eth_deposit_process');
                 $val = json_decode($val);
                 \Log::info(["logs", $val->result->address]);
                 $ins = Users::where('id', $userid)->first();
@@ -1672,6 +1676,26 @@ function generate_currency_address($userid, $currency)
                 $ins->save();
                 $address = $ins->ETH_addr;
                 return $address;
+
+                //blockahin code
+                // $val = create_eth_address();
+                // $ins = Users::where('id', $userid)->first();
+
+                // $ins->ETH_addr = $val;
+                // $ins->save();
+                // $count = UserCurrencyAddresses::where('user_id', $userid)->where('currency_name', 'ETH')->first();
+                // if ($count != null) {
+                //     $count->currency_addr = $val;
+                //     $count->save();
+                // } else {
+                //     $addr = new UserCurrencyAddresses();
+                //     $addr->user_id = $userid;
+                //     $addr->currency_id = 2;
+                //     $addr->currency_name = 'ETH';
+                //     $addr->currency_addr = $val;
+                //     $addr->save();
+                // }
+                // return $val;
             }
         } elseif ($currency == 'BTC') {
             $btc = get_user_details($userid, 'BTC_addr');
