@@ -212,8 +212,8 @@
         $("#kyc").validate({
             rules:
                 {
-                    first_name: { required: true,minlength:2, regex:"^[A-Za-z]*$"},
-                    last_name: { required: true,minlength:2, regex:"^[A-Za-z]*$"},
+                    first_name: { required: true,minlength:2, regex:"^(?!.*\\s{2,})(?!^ )[A-Za-z\\s]{1,50}$"},
+                    last_name: { required: true,minlength:2, regex:"^(?!.*\\s{2,})(?!^ )[A-Za-z\\s]{1,50}$"},
                     isdcode:{required:'ISD code is required'},
                     country_id: { required: true},
                     // dob: { required: true},
