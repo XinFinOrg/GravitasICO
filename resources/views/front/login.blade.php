@@ -59,7 +59,7 @@
 
 <!-- BEGIN LOGO -->
 <div class="logo">
-    <a href="http://gravitas.io/">
+    <a href="{{url('/login')}}">
         <img src="{{URL::asset('front')}}/assets/img/logo-big-light.png" alt="" />
     </a>
 </div>
@@ -112,7 +112,7 @@
                 <button type="submit"  class="btn btn-icotoken-green">Login</button>
             </div>
             <div class="login-options">
-                <a href="http://gravitas.io/" class="" role="button"> < Back to Site</a>
+                <a href="{{url('/contact_us')}}" class="" role="button"> < Contact Us</a>
                 <!--<a href="javascript:;" class="btn-primary btn pull-right" id="register-btn" ui-sref="auth.register">Create an account</a>-->
                 <a href="{{url('/register')}}" class="pull-right" id="register-btn"><u> Sign Up</u></a><!--ui-sref="auth.register"-->
             </div>

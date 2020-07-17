@@ -62,7 +62,7 @@
 
 <!-- BEGIN LOGO -->
 <div class="logo">
-    <a href="http://Gravitas.io/">
+    <a href="{{url('/login')}}">
         <img src="{{URL::asset('front')}}/assets/img/logo-big-light.png" alt="" />
 
     </a>
