@@ -519,7 +519,7 @@ class SiteadminController extends Controller
         } else {
             $result = UserBalance::where('user_id', $request['user_id'])->first();
 
-            $btc = $result->BTC;
+            // $btc = $result->BTC;
             $eth = $result->ETH;
             $icotoken = $result->GIFT;
 
@@ -556,7 +556,7 @@ class SiteadminController extends Controller
 
                 }
             } else {
-                $result->BTC = $request['btc'];
+                // $result->BTC = $request['btc'];
                 $result->ETH = $request['eth'];
                 $result->GIFT = $request['icotoken'];
                 if ($result->update()) {
@@ -565,35 +565,35 @@ class SiteadminController extends Controller
                     $ip = \Request::ip();
 
 
-                    if ($btc != $request['btc']) {
-                        $ins = new Transaction;
-                        $ins->user_id = $request['user_id'];
-                        $ins->payment_method = 'Cryptocurrency Account';
-                        $ins->transaction_id = $transid;
+                    // if ($btc != $request['btc']) {
+                    //     $ins = new Transaction;
+                    //     $ins->user_id = $request['user_id'];
+                    //     $ins->payment_method = 'Cryptocurrency Account';
+                    //     $ins->transaction_id = $transid;
 
-                        $ins->type = 'Updated';
-                        $ins->transaction_type = '1';
+                    //     $ins->type = 'Updated';
+                    //     $ins->transaction_type = '1';
 
-                        $ins->updated_at = $today;
-                        $ins->crypto_address = 'By Admin';
-                        $ins->transfer_amount = '0';
-                        $ins->fee = '0';
-                        $ins->tax = '0';
-                        $ins->verifycode = '1';
-                        $ins->order_id = '0';
-                        $ins->status = 'Completed';
-                        $ins->cointype = '2';
-                        $ins->payment_status = 'Paid';
-                        $ins->paid_amount = '0';
-                        $ins->wallet_txid = '';
-                        $ins->ip_address = $ip;
-                        $ins->verify = '1';
-                        $ins->blocknumber = '';
+                    //     $ins->updated_at = $today;
+                    //     $ins->crypto_address = 'By Admin';
+                    //     $ins->transfer_amount = '0';
+                    //     $ins->fee = '0';
+                    //     $ins->tax = '0';
+                    //     $ins->verifycode = '1';
+                    //     $ins->order_id = '0';
+                    //     $ins->status = 'Completed';
+                    //     $ins->cointype = '2';
+                    //     $ins->payment_status = 'Paid';
+                    //     $ins->paid_amount = '0';
+                    //     $ins->wallet_txid = '';
+                    //     $ins->ip_address = $ip;
+                    //     $ins->verify = '1';
+                    //     $ins->blocknumber = '';
 
-                        $ins->currency_name = 'BTC';
-                        $ins->amount = $request['btc'];
-                        $ins->save();
-                    }
+                    //     $ins->currency_name = 'BTC';
+                    //     $ins->amount = $request['btc'];
+                    //     $ins->save();
+                    // }
                     if ($eth != $request['eth']) {
                         $ins = new Transaction;
                         $ins->user_id = $request['user_id'];

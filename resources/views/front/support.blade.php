@@ -87,7 +87,7 @@
                         <span class="form-title">Support</span>
                     </div>
                     <p>Have a question?<br>Reach out to us and we will get back to you shortly.</p>
-                    <p><i class="fa fa-envelope"></i> <a href="mailto:support@Gravitas.io">support@Gravitas.io</a></p>
+                    <p><i class="fa fa-envelope"></i> <a href="mailto:support@Gravitas.io">support@gravitas.io</a></p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -118,12 +118,12 @@
                             <div class="form-actions text-center">
                                 <button type="submit"  class="btn btn-icotoken-green">Submit</button>
                             </div>
-                            
+                            <br>
                             <div class="login-options">
                                 @if(Session::has('alphauserid'))
                                 <a href="{{url('/ico')}}" class="" role="button"> < Back to Site</a>
                                @else
-                                    <a href="http://Gravitas.io" class="" role="button"> < Back to Site</a>
+                                    <a href="{{url('/login')}}" class="" role="button"> < Back to Site</a>
                                @endif
                             </div>
 
